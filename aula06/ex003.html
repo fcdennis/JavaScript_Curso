@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Home" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa JS</title>
+    <style>
+        body{
+            background-color: rgb(77, 98, 107);
+            color: rgb(12, 12, 12);
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias qui quaerat expedita ullam tempore illum odit sit adipisci, quam vitae dignissimos exercitationem voluptatem, consectetur laborum magni dicta, omnis neque dolore.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corporis maxime dolorem velit, esse et, adipisci, repellat aliquam eveniet quod beatae deserunt placeat iure illum praesentium consequuntur delectus! Tempore, soluta.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima debitis voluptates aperiam earum, corrupti, incidunt nesciunt error sapiente quas adipisci hic eaque, tenetur iste doloribus dicta molestias totam dignissimos veniam.</p>
+    <script>
+        var num1 = window.prompt('Digite um número: ') // String
+        var num2 = window.prompt('Digite um outro nome: ') // String
+        num1 = Number(num1) // Converte para Number
+        num2 = Number(num2) // Converte para Number
+        var soma = num1 + num2
+        //window.alert('A soma dos números é: ' + soma.toString()) // Converteu para String
+        window.alert(`A soma entre ${num1} e ${num2} é igual a ${soma}`)
+    </script>
+</body>
+</html>
