@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos em DOM</title>
+    <style>
+        body{
+            background-color: gray;
+            color: whitesmoke;
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="principal">Iniciando os estudos em DOM</h1>
+    <h1>Secundário</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</strong></p>
+    <div id='msg'>Vai clicar aqui</div>
+    <script>
+        var d = window.document.querySelector('div#msg')
+        var forte = window.document.querySelector('strong')
+        var título = window.document.querySelector('h1.principal')
+        título.style.color = 'blue'
+        d.style.color = 'red'
+        forte.style.color = 'black'
+
+    </script>
+    
+</body>
+</html>
