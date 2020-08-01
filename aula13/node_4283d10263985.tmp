@@ -1,0 +1,5 @@
+var contador = 0
+do {
+    console.log(`Passo ${contador}`)
+}
+while (contador < 10)
