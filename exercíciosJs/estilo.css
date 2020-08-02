@@ -33,6 +33,7 @@ footer {
     font-style: italic;
 }
 
+/* Exercício 002 - Idade */
 img#imagem {
     width: 250px;
     height: 250px;
@@ -41,11 +42,12 @@ img#imagem {
 
 }
 
-p {
+/* Exercício 003 - Contagem */
+p.ex03 {
     text-align: left;
 }
 
-/* Exercício Tabuada */
+/* Exercício 004 - Tabuada */
 
 #tabuada {
     display: grid;
@@ -53,6 +55,19 @@ p {
 }
 
 #scroll {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border: solid grey 1px;
+}
+
+/* Exercício 005 - Analisador de Números */
+#analisador {
+    display: grid;
+    place-items: center;
+}
+
+#listnumeros {
     display: inline-block;
     vertical-align: top;
     overflow: hidden;
