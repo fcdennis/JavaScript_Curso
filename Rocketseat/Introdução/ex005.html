@@ -46,13 +46,13 @@
         var output = habilidade(usuarios)*/
 
         function cadastrar(){
-            let usuarios = []
-            let usuario = {}
-            usuario.nome = 'Dennis'
+            let usuario ={}
             let nome = document.querySelector('input#nome')
-            
-            
             let output = document.querySelector('div#output')
+            usuario.nome = nome
+            let usuarios = []
+            usuarios.push(usuario)
+            output.innerHTML = habilidade(usuarios)
         }
     </script>
 </body>

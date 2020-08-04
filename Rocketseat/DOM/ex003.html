@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 003</title>
+</head>
+
+<body>
+    <h1>Exercício 003 DOM</h1>
+    <h2>Gera uma lista dinâmica a partir de um vetor</h2>
+    <div id="output">
+
+    </div>
+</body>
+<script>
+    var nomes = ["Diego", "Gabriel", "Lucas"]
+    var output = document.querySelector('div#output')
+    var listaul = document.createElement('ul')
+    output.appendChild(listaul)
+    let li1 = document.createElement('li')
+    let li2 = document.createElement('li')
+    let li3 = document.createElement('li')
+    li1.innerText = `${nomes[0]}`
+    li2.innerText = `${nomes[1]}`
+    li3.innerText = `${nomes[2]}`
+    listaul.appendChild(li1)
+    listaul.appendChild(li2)
+    listaul.appendChild(li3) 
+</script>
+
+</html>

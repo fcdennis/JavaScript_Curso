@@ -1,6 +1,12 @@
-let Dennis= {}
-Dennis.nome = 'Dennis'
-Dennis.habilidades = []
-Dennis.habilidades.push('JavaScript')
-let usuarios = [Dennis]
-console.log(usuarios)
+var elements = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium',
+    'Oxygen'
+  ];
+  
+  var tamanho = elements.map(element => {
+    return element.length;
+  })
+  console.log(tamanho)
