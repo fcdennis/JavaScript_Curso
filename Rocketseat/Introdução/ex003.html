@@ -7,10 +7,10 @@
 </head>
 <body>
     <h1>Exercício 003 - Introdução</h1>
+    <h2>'JavaScript' retorna true, outras palavras retornam false</h2>
     <div id="input">
         <input type="text" name="hab" id="hab">
-        <input type="button" value="Enviar" onclick="adicionar()">
-        <p><input type="button" value="Verificar"></p>
+        <input type="button" value="Verificar" onclick="adicionar()">
 
     </div>
     <div id="output">
@@ -29,8 +29,9 @@
         function adicionar(){
             let habilidades = []
             let txt = document.querySelector('input#hab')
-            habilidades.push(txt)
-            console.log(temHabilidade(habilidades))
+            let resp = document.querySelector('div#output')
+            habilidades.push(txt.value)
+            resp.innerHTML = `${temHabilidade(habilidades)}`
         }  
     </script>
 </body>
