@@ -3,31 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Exercício 004</title>
 </head>
 
 <body>
     <h1>Exercício 004 DOM</h1>
-    <h2>Gera uma lista dinâmica a partir de um vetor e adiciona valores a partir de um input de html</h2>
-    <div id="input">
-        <input type="text" name="nome">
-        <button onClick="adicionar()">Adicionar</button>
-    </div>
-    <div id="output">
 
+    <h2>Gera uma lista dinâmica a partir de um vetor e adiciona valores a partir de um input de html</h2>
+
+    <div id="input">
+        <input id="nome" type="text" name="nome">
+        <button onClick="adicionarNovoNome()">Adicionar</button>
+        <div id="adicionado"></div>
+        <p><button onClick="imprimir()">Finalizar</button> </p>
     </div>
+
+    <div id="output">
+    </div>
+
 </body>
+
 <script>
-    var nome = ["Diego", "Gabriel", "Lucas"]
-    var lst = document.createElement('ul')
-    for (let c = 0; c < nome.length; c++){
-        nome[c] = document.createElement('li')
-        nome[c].innerHTML = `${(nome[c].value)}`
-        lst.appendChild(nome[c])
+    const nome = []
+    var adicionados = 0
+    function adicionarNovoNome() {
+        let adicionado = document.querySelector('div#adicionado')
+        let seleção = document.querySelector('input#nome')
+        let novoNome = seleção.value
+        nome.push(novoNome)
+        adicionados += 1
+        adicionado.innerHTML = `Nomes adicionados: ${adicionados}`
+        seleção.value = ""
     }
-    var output = document.querySelector('div#output')
-    output.appendChild(lst)
+
+    function criarLi(txt, parent){
+        let novaLi = document.createElement('li')
+        novaLi.innerText = txt
+        novaLi.style.color = '#00'
+        novaLi.style.fontSize = '16pt'
+        parent.appendChild(novaLi)
+    }
+
+    function imprimir(){
+        let output = document.querySelector('div#output')
+        let novaUl = document.createElement('ul')
+        output.appendChild(novaUl)
+        for (let i = 0; i < nome.length; i++){
+            criarLi(nome[i], novaUl)
+        }
+    }
+
+    function estilo(){
+        let estilo = document.body
+        estilo.style.backgroundColor = '#0F0'
+        estilo.style.height = "500px"
+        estilo.style.display = 'grid'
+        estilo.style.placeItems = 'center'
+    }
+    
+    window.addEventListener("load", estilo)
+
 </script>
 
 </html>

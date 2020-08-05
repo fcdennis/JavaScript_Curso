@@ -11,23 +11,27 @@
     <h1>Exercício 003 DOM</h1>
     <h2>Gera uma lista dinâmica a partir de um vetor</h2>
     <div id="output">
-
     </div>
 </body>
 <script>
-    var nomes = ["Diego", "Gabriel", "Lucas"]
-    var output = document.querySelector('div#output')
-    var listaul = document.createElement('ul')
-    output.appendChild(listaul)
-    let li1 = document.createElement('li')
-    let li2 = document.createElement('li')
-    let li3 = document.createElement('li')
-    li1.innerText = `${nomes[0]}`
-    li2.innerText = `${nomes[1]}`
-    li3.innerText = `${nomes[2]}`
-    listaul.appendChild(li1)
-    listaul.appendChild(li2)
-    listaul.appendChild(li3) 
+    const nome = ["Diego", "Gabriel", "Lucas"]
+
+    function criarLi(txt, parent){
+        let novaLi = document.createElement('li')
+        novaLi.innerText = txt
+        parent.appendChild(novaLi)
+    }
+
+    function imprimir(){
+        let output = document.querySelector('div#output')
+        let novaUl = document.createElement('ul')
+        output.appendChild(novaUl)
+        for (let i = 0; i < nome.length; i++){
+            criarLi(nome[i], novaUl)
+        }
+    }
+    window.addEventListener("load", imprimir)
+
 </script>
 
 </html>
