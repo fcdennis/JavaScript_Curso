@@ -7,16 +7,20 @@
     <title>Exercício 002</title>
 </head>
 
-<body>
+<body onchange="monitoring()">
     <h1>Exercício 002 DOM</h1>
     <h2>Ao clica no botão cria um quadrado vermelho, ao passar o mouse por cima do quadrado gerado, ele muda de cor</h2>
     <div id="input">
-        <input type="button" value="Criar" onclick="criar()">
+        <input type="button" value="Criar">
     </div>
     <div id="output">
 
     </div>
     <script>
+        var output = document.querySelector('div#output')
+        var input = document.querySelector('div#input')
+        input.onclick = squareCreate
+
         function getRandomColor() {
             var letters = "0123456789ABCDEF";
             var color = "#";
@@ -25,20 +29,22 @@
             }
             return color;
         }
-        var newColor = getRandomColor()
 
-        function criar() {
-            let output = document.querySelector('div#output')
+        function squareCreate() {
             var quadrado = document.createElement('div')
-            quadrado.setAttribute('id', 'qdd')
+            quadrado.setAttribute('class', 'qdd')
             quadrado.style.width = '100px'
             quadrado.style.height = '100px'
             quadrado.style.border = '1px solid #000'
-            quadrado.style.background = "#F00"
+            quadrado.style.background = getRandomColor()
             quadrado.style.margin = '1px'
             output.appendChild(quadrado)
-        }     
+        }
 
+        function colorChange() {
+            
+        }
+            
     </script>
 </body>
 

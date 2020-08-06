@@ -15,8 +15,7 @@
     <div id="input">
         <input id="nome" type="text" name="nome">
         <button onClick="adicionarNovoNome()">Adicionar</button>
-        <div id="adicionado"></div>
-        <p><button onClick="imprimir()">Finalizar</button> </p>
+        <p><button onClick="render()">Finalizar</button> </p>
     </div>
 
     <div id="output">
@@ -26,14 +25,11 @@
 
 <script>
     const nome = []
-    var adicionados = 0
+
     function adicionarNovoNome() {
-        let adicionado = document.querySelector('div#adicionado')
         let seleção = document.querySelector('input#nome')
         let novoNome = seleção.value
         nome.push(novoNome)
-        adicionados += 1
-        adicionado.innerHTML = `Nomes adicionados: ${adicionados}`
         seleção.value = ""
     }
 
@@ -45,7 +41,7 @@
         parent.appendChild(novaLi)
     }
 
-    function imprimir(){
+    function render(){
         let output = document.querySelector('div#output')
         let novaUl = document.createElement('ul')
         output.appendChild(novaUl)
