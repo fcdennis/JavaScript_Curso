@@ -96,17 +96,18 @@
     #page-landing #container {
         max-width: 1100px;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 2f 1f 2fr;
         grid-template-rows: 350px 1fr;
         grid-template-areas:
-        "a b b"
-        "c c d";
+        "proffy image image"
+        "button button conections"
+        ;
         column-gap: 87px;
         row-gap: 86px;
     }
 
     .logo-container {
-        grid-area: a;
+        grid-area: proffy;
         text-align: initial;
         align-self: center;
         margin: 0;
@@ -116,19 +117,19 @@
         height: 127px;
     }
 
-    .hero.image {
-        grid-area: b;
+    .hero-image {
+        grid-area: image;
         height: 350px;
     }
 
     .buttons-container {
-        grid-area: c;
+        grid-area: button;
         justify-content: flex-start;
         margin: 0;
     }
 
     .total-connections{
-        grid-area: d;
+        grid-area: conections;
         justify-self: end;
         font-size: 1.2rem;
     }
